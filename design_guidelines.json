@@ -1,0 +1,83 @@
+{
+  "theme": "Light",
+  "archetype": "Archetype 1 (Organic & Earthy) mixed with Archetype 4 (Swiss & High-Contrast)",
+  "color_palette": {
+    "background": "#FAFAFA",
+    "surface": "#FFFFFF",
+    "primary": "#25D366",
+    "primary_hover": "#1EAC52",
+    "secondary": "#0A0A0A",
+    "accent_sage": "#B5C9B3",
+    "text_primary": "#0A0A0A",
+    "text_secondary": "#52525B",
+    "border": "#E4E4E7"
+  },
+  "typography": {
+    "heading_font": "Cabinet Grotesk",
+    "body_font": "Manrope",
+    "scale": {
+      "h1": "text-5xl sm:text-6xl tracking-tighter leading-tight",
+      "h2": "text-4xl sm:text-5xl tracking-tight leading-tight",
+      "h3": "text-2xl sm:text-3xl tracking-tight",
+      "body": "text-base sm:text-lg leading-relaxed text-secondary",
+      "overline": "uppercase tracking-[0.2em] text-xs font-bold text-primary"
+    }
+  },
+  "layout_rules": {
+    "spacing": "Generous spacing. Sections use py-24 to py-32. Containers use p-6 to p-8.",
+    "grid": "Bento Grid Protocol. Mode A (Tetris Grid) for marketing visual sections. Mode B for Pricing and feature dense areas.",
+    "alignment": "Optical alignment over geometrical. Left-aligned dense content. Center-aligned Hero optional but preferred left-aligned text with right-aligned visual mockup.",
+    "container": "Max width 7xl, mx-auto, px-4 sm:px-6 lg:px-8"
+  },
+  "components_instructions": {
+    "navbar": "Sticky header with Crystal Glass effect (backdrop-blur-xl bg-white/70, border-b border-white/40). z-50. Includes Logo ('Wraft'), Nav Links, and 'Sign In'/'Sign Up' CTAs leading to /dashboard. Mobile menu using hamburger.",
+    "hero": "Split layout. Left: H1 (emphasizing AI WhatsApp agent for local business), Subtitle, CTA buttons (Primary solid green, Secondary outline). Right: Custom animated product demo mockup built with HTML/Tailwind/Framer Motion (No video). It should simulate a chat UI receiving a question in Hindi/Kannada and the AI replying based on uploaded docs.",
+    "marquee": "Use react-fast-marquee. 'Editorial Ribbon' style. Low contrast background (bg-accent_sage/10), dark text. Large spacing (gap-32). Content: Supported languages (Kannada, Hindi, English, Tamil, Telugu, etc.).",
+    "features_bento": "Asymmetric bento grid (grid-cols-1 md:grid-cols-12). Show setup steps: 1. Upload Doc/Website URL. 2. AI Trains instantly. 3. Customer chats on WhatsApp. Use subtle glassmorphism or neumorphism. Inject WhatsApp Green (#25D366) specifically when showing the WhatsApp integration part.",
+    "how_it_works_sticky": "Vertical sticky scroll section. Use Framer Motion to create a sticky scrolling effect where cards stack over each other as user scrolls down. Each card highlights a step (Setup, Train, Deploy, Support).",
+    "competitor_comparison": "Grid/Table comparing Wraft vs Chatbase. Use 'Grid Borders' (The Technical Look). Emphasize Wraft's 2000 messages on Standard plan (way more affordable). Use checkmarks (Lucide icons). Highlight the Wraft column with a subtle green background or border.",
+    "pricing": "4 columns for Free, Standard, Pro, Business. Highlight 'Standard' (₹999 / 2000 msgs) and 'Pro' (₹1899 / 8000 msgs). Pricing cards should use 1px subtle border, soft shadow on hover, with prominent green CTAs.",
+    "testimonials": "Social proof section using the provided images. Simple clean cards with a quote, business owner name, and their photo.",
+    "footer": "Dark contrast. Deep charcoal background (#0A0A0A) with white/gray text. Massive space (py-24). Large 'Wraft' logo text at the bottom. Columns for links."
+  },
+  "motion_guidelines": {
+    "hover_states": "All interactive elements must have hover states (e.g., hover:bg-slate-900 hover:text-white). Buttons lift slightly (-translate-y-1).",
+    "scroll_animations": "Use Framer Motion (whileInView) for staggered entrance of bento items and pricing cards. Recommend installing lenis for smooth scrolling.",
+    "custom_animations": "Simulated typing effect and message pop-ups in the Hero chat UI mockup."
+  },
+  "media": {
+    "images": {
+      "abstract_green_bg": {
+        "url": "https://images.unsplash.com/photo-1763929154497-c089098f8401?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2MzR8MHwxfHNlYXJjaHwzfHxhYnN0cmFjdCUyMGdyZWVuJTIwZ2VvbWV0cmljJTIwM2QlMjBzaGFwZXN8ZW58MHx8fHwxNzc2MTkzNzczfDA&ixlib=rb-4.1.0&q=85",
+        "description": "Abstract green shapes, use with very low opacity (10-20%) as a background texture in the Hero or Features section."
+      },
+      "chat_mockup": {
+        "url": "https://images.unsplash.com/photo-1767449280971-46e438b1ce4a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDJ8MHwxfHNlYXJjaHwyfHxzbWFydHBob25lJTIwY2hhdCUyMGFwcCUyMGludGVyZmFjZSUyMG1vY2t1cHN8ZW58MHx8fHwxNzc2MTkzNzczfDA&ixlib=rb-4.1.0&q=85",
+        "description": "Mobile app interface, use as a fallback if HTML mockup is insufficient, or within a bento grid card."
+      },
+      "testimonial_1": {
+        "url": "https://images.unsplash.com/photo-1758691461516-7e716e0ca135?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MDV8MHwxfHNlYXJjaHwzfHxsb2NhbCUyMGJ1c2luZXNzJTIwb3duZXIlMjBzbWlsaW5nJTIwY2xpbmljfGVufDB8fHx8MTc3NjE5Mzc1NHww&ixlib=rb-4.1.0&q=85",
+        "description": "Elderly clinic owner smiling. Use for testimonial."
+      },
+      "testimonial_2": {
+        "url": "https://images.unsplash.com/photo-1607756196724-7bcf730ca638?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxNzV8MHwxfHNlYXJjaHwyfHxpbmRpYW4lMjBsb2NhbCUyMGJ1c2luZXNzJTIwb3duZXIlMjBzbWlsaW5nfGVufDB8fHx8MTc3NjE5Mzc1NHww&ixlib=rb-4.1.0&q=85",
+        "description": "Indian local business owner smiling. Use for testimonial."
+      },
+      "testimonial_3": {
+        "url": "https://images.unsplash.com/photo-1685884626300-45d8dd0d2aaf?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxNzV8MHwxfHNlYXJjaHwzfHxpbmRpYW4lMjBsb2NhbCUyMGJ1c2luZXNzJTIwb3duZXIlMjBzbWlsaW5nfGVufDB8fHx8MTc3NjE5Mzc1NHww&ixlib=rb-4.1.0&q=85",
+        "description": "Indian store owner smiling. Use for testimonial."
+      }
+    },
+    "icons": "lucide-react for standard icons. Use pure HTML/CSS for chat bubbles."
+  },
+  "testing": {
+    "attributes": "All interactive elements MUST include 'data-testid' attributes (e.g., data-testid='hero-cta-button', data-testid='pricing-standard-btn')."
+  },
+  "tech_stack": [
+    "framer-motion",
+    "lucide-react",
+    "react-fast-marquee",
+    "clsx",
+    "tailwind-merge"
+  ]
+}

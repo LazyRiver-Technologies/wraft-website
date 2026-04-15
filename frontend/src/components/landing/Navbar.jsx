@@ -8,7 +8,6 @@ const navLinks = [
   { label: "How It Works", href: "#how-it-works" },
   { label: "Pricing", href: "#pricing" },
   { label: "Compare", href: "#comparison" },
-  { label: "Try Demo", href: "/demo", isRoute: true },
 ];
 
 export default function Navbar() {
@@ -43,23 +42,13 @@ export default function Navbar() {
 
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
-              link.isRoute ? (
-                <button
-                  key={link.label}
-                  onClick={() => navigate(link.href)}
-                  className="text-sm font-semibold text-[#25D366] hover:text-[#1EAC52] transition-colors"
-                >
-                  {link.label}
-                </button>
-              ) : (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  className="text-sm font-medium text-[#52525B] hover:text-[#0A0A0A] transition-colors"
-                >
-                  {link.label}
-                </a>
-              )
+              <a
+                key={link.label}
+                href={link.href}
+                className="text-sm font-medium text-[#52525B] hover:text-[#0A0A0A] transition-colors"
+              >
+                {link.label}
+              </a>
             ))}
           </div>
 

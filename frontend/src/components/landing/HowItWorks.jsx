@@ -221,9 +221,9 @@ export default function HowItWorks() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
-          {/* Left - Steps */}
-          <div className="space-y-3">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-start">
+          {/* Left - Steps (narrower) */}
+          <div className="lg:col-span-2 space-y-3">
             {steps.map((step, i) => (
               <motion.button
                 key={i}
@@ -232,31 +232,29 @@ export default function HowItWorks() {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
                 onClick={() => handleStepClick(i)}
-                className={`w-full text-left rounded-xl border p-5 transition-all duration-300 ${
+                className={`w-full text-left rounded-xl border p-4 transition-all duration-300 ${
                   activeStep === i
                     ? "bg-[#0A0A0A] border-[#0A0A0A] shadow-lg"
                     : "bg-[#FAFAFA] border-[#E4E4E7] hover:border-[#25D366]/30"
                 }`}
               >
-                <div className="flex items-start gap-4">
-                  <div className={`w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 transition-colors ${
+                <div className="flex items-start gap-3">
+                  <div className={`w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0 transition-colors ${
                     activeStep === i ? "bg-[#25D366]" : "bg-[#25D366]/10"
                   }`}>
-                    <step.icon className={`w-5 h-5 ${activeStep === i ? "text-white" : "text-[#25D366]"}`} />
+                    <step.icon className={`w-4 h-4 ${activeStep === i ? "text-white" : "text-[#25D366]"}`} />
                   </div>
                   <div>
-                    <div className="flex items-center gap-2 mb-1">
-                      <span className={`text-[10px] font-bold tracking-wider ${activeStep === i ? "text-[#25D366]" : "text-[#52525B]/40"}`}>
-                        STEP {step.number}
-                      </span>
-                    </div>
+                    <span className={`text-[9px] font-bold tracking-wider ${activeStep === i ? "text-[#25D366]" : "text-[#52525B]/40"}`}>
+                      STEP {step.number}
+                    </span>
                     <h3
-                      className={`text-base font-bold mb-1 ${activeStep === i ? "text-white" : "text-[#0A0A0A]"}`}
+                      className={`text-sm font-bold ${activeStep === i ? "text-white" : "text-[#0A0A0A]"}`}
                       style={{ fontFamily: 'Bricolage Grotesque' }}
                     >
                       {step.title}
                     </h3>
-                    <p className={`text-sm ${activeStep === i ? "text-white/60" : "text-[#52525B]"}`}>
+                    <p className={`text-xs mt-0.5 ${activeStep === i ? "text-white/50" : "text-[#52525B]"}`}>
                       {step.subtitle}
                     </p>
                   </div>
@@ -265,8 +263,8 @@ export default function HowItWorks() {
             ))}
           </div>
 
-          {/* Right - Demo */}
-          <div className="lg:sticky lg:top-28">
+          {/* Right - Demo (bigger) */}
+          <div className="lg:col-span-3 lg:sticky lg:top-28">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeStep}
@@ -274,6 +272,7 @@ export default function HowItWorks() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -15 }}
                 transition={{ duration: 0.35 }}
+                className="min-h-[380px]"
               >
                 <StepDemo stepIndex={activeStep} />
               </motion.div>

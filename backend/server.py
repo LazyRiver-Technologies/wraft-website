@@ -415,7 +415,7 @@ async def demo_chat(input: DemoChat):
     session = await db.demo_sessions.find_one({"session_id": input.session_id})
     if not session:
         raise HTTPException(status_code=404, detail="Demo session not found")
-    if session.get("message_count", 0) >= 2:
+    if session.get("message_count", 0) >= 1:
         return {"reply": "", "limit_reached": True, "message_count": session["message_count"]}
     context = session.get("raw_text", "")
     system_prompt = f"You are a helpful AI assistant for a business. Answer questions ONLY based on the following business data. Be concise and helpful. If the answer is not in the data, say you don't have that information.\n\nBUSINESS DATA:\n{context[:8000]}"

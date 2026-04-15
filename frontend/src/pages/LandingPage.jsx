@@ -4,6 +4,7 @@ import SocialProof from "@/components/landing/SocialProof";
 import LanguageMarquee from "@/components/landing/LanguageMarquee";
 import Features from "@/components/landing/Features";
 import HowItWorks from "@/components/landing/HowItWorks";
+import TryItSection from "@/components/landing/TryItSection";
 import Comparison from "@/components/landing/Comparison";
 import Pricing from "@/components/landing/Pricing";
 import Testimonials from "@/components/landing/Testimonials";
@@ -19,6 +20,7 @@ export default function LandingPage() {
       <LanguageMarquee />
       <Features />
       <HowItWorks />
+      <TryItSection />
       <Comparison />
       <Pricing />
       <Testimonials />

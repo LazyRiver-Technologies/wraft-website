@@ -1,5 +1,6 @@
 import Navbar from "@/components/landing/Navbar";
 import Hero from "@/components/landing/Hero";
+import SocialProof from "@/components/landing/SocialProof";
 import LanguageMarquee from "@/components/landing/LanguageMarquee";
 import Features from "@/components/landing/Features";
 import HowItWorks from "@/components/landing/HowItWorks";
@@ -14,6 +15,7 @@ export default function LandingPage() {
     <div data-testid="landing-page" className="min-h-screen bg-[#FAFAFA]">
       <Navbar />
       <Hero />
+      <SocialProof />
       <LanguageMarquee />
       <Features />
       <HowItWorks />

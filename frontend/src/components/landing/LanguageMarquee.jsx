@@ -16,12 +16,12 @@ const languages = [
 
 export default function LanguageMarquee() {
   return (
-    <section data-testid="language-marquee" className="py-6 bg-[#B5C9B3]/10 border-y border-[#E4E4E7]">
+    <section data-testid="language-marquee" className="py-6 overflow-hidden">
       <Marquee speed={40} gradient={false} pauseOnHover>
         {languages.map((lang, i) => (
           <span
             key={i}
-            className="mx-12 text-sm font-medium text-[#52525B] tracking-wide"
+            className="mx-12 text-sm font-semibold tracking-wide shiny-text"
           >
             {lang}
             <span className="ml-12 text-[#25D366]/30">&#x2022;</span>

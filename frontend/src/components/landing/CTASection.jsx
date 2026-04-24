@@ -6,18 +6,19 @@ export default function CTASection() {
   const navigate = useNavigate();
 
   return (
-    <section data-testid="cta-section" className="py-24 sm:py-32 bg-white">
+    <section data-testid="cta-section" className="py-24 sm:py-32">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 40, scale: 0.97 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="relative rounded-3xl bg-[#0A0A0A] p-10 sm:p-16 text-center overflow-hidden"
+          transition={{ duration: 0.6, type: "spring", stiffness: 80, damping: 16 }}
+          className="relative rounded-3xl bg-gradient-to-br from-[#0A0A0A] via-[#111111] to-[#1a1a1a] p-10 sm:p-16 text-center overflow-hidden"
         >
           {/* Background decorative elements */}
-          <div className="absolute top-0 left-0 w-48 h-48 bg-[#25D366]/10 rounded-full blur-3xl" />
-          <div className="absolute bottom-0 right-0 w-64 h-64 bg-[#25D366]/5 rounded-full blur-3xl" />
+          <div className="absolute top-0 left-0 w-64 h-64 bg-[#25D366]/15 rounded-full blur-[80px]" />
+          <div className="absolute bottom-0 right-0 w-80 h-80 bg-[#25D366]/8 rounded-full blur-[100px]" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#25D366]/5 rounded-full blur-[120px]" />
 
           <div className="relative z-10">
             <h2

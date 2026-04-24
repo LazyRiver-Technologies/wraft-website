@@ -61,7 +61,7 @@ export default function TryItSection() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="bg-white rounded-2xl border border-[#E4E4E7] p-6 sm:p-8 shadow-sm"
+          className="bg-white/70 backdrop-blur-xl rounded-2xl border border-white/50 p-6 sm:p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)]"
         >
           {/* Tabs */}
           <div className="flex gap-2 mb-6">

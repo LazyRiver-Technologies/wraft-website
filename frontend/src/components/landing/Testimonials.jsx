@@ -54,10 +54,10 @@ export default function Testimonials() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: i * 0.15 }}
-              className="bg-white rounded-2xl border border-[#E4E4E7] p-6 sm:p-8 hover:shadow-md transition-all duration-300 hover:-translate-y-1"
+              transition={{ duration: 0.5, delay: i * 0.15, type: "spring", stiffness: 100, damping: 20 }}
+              className="bg-white/70 backdrop-blur-xl rounded-2xl border border-white/50 p-6 sm:p-8 hover:shadow-[0_8px_30px_rgb(0,0,0,0.06)] transition-all duration-500 hover:-translate-y-2 group"
             >
-              <div className="flex gap-0.5 mb-4">
+              <div className="flex gap-0.5 mb-4 transition-transform duration-500 group-hover:scale-105 group-hover:origin-left">
                 {Array.from({ length: t.rating }).map((_, j) => (
                   <Star key={j} className="w-4 h-4 fill-[#FFB800] text-[#FFB800]" />
                 ))}

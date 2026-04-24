@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import WraftLogo from "@/components/ui/WraftLogo";
 
 const navLinks = [
   { label: "Features", href: "#features" },
@@ -35,9 +36,12 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <a href="/" data-testid="navbar-logo" className="text-xl font-bold tracking-tight" style={{ fontFamily: 'Bricolage Grotesque' }}>
-            <span className="text-[#0A0A0A]">wraft</span>
-            <span className="text-[#25D366]">.</span>
+          <a href="/" data-testid="navbar-logo" className="flex items-center gap-2 group">
+            <WraftLogo className="w-8 h-8 group-hover:scale-110 transition-transform duration-300" />
+            <span className="text-xl font-bold tracking-tight" style={{ fontFamily: 'Bricolage Grotesque' }}>
+              <span className="text-[#0A0A0A]">wraft</span>
+              <span className="text-[#25D366]">.</span>
+            </span>
           </a>
 
           <div className="hidden md:flex items-center gap-8">

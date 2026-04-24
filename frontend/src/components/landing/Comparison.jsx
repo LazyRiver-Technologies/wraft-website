@@ -5,16 +5,18 @@ import { useNavigate } from "react-router-dom";
 const competitors = ["wraft", "Chatbase", "WATI", "AiSensy", "Interakt"];
 
 const rows = [
-  { feature: "Standard Plan Price", values: ["₹999/mo", "$32/mo (~₹2,700)", "₹4,899/mo", "₹999/mo", "₹2,499/mo"], wraftBest: true },
-  { feature: "Messages Included", values: ["2,000", "500", "1,000", "Pay per msg", "1,000"], wraftBest: true },
-  { feature: "Cost Per Message", values: ["₹0.50", "~₹5.40", "~₹4.90", "~₹1.04+", "~₹2.50"], wraftBest: true },
+  // Boolean/tick-mark rows first — Wraft dominance is immediately visible
   { feature: "WhatsApp Integration", values: [true, true, true, true, true], wraftBest: false },
-  { feature: "Indian Language Focus", values: ["10+ native", "Generic 80+", "Basic", "Basic", "Basic"], wraftBest: true },
   { feature: "Free Setup & Onboarding", values: [true, false, false, false, false], wraftBest: true },
   { feature: "24/7 Support (All Plans)", values: [true, false, false, false, false], wraftBest: true },
   { feature: "RAG Document Training", values: [true, true, false, false, false], wraftBest: true },
-  { feature: "Custom Branding", values: ["Included free", "$39/mo extra", "Extra cost", "Extra cost", "Extra cost"], wraftBest: true },
   { feature: "Appointment Booking", values: [true, "Via 3rd party", false, false, false], wraftBest: true },
+  // Value comparison rows
+  { feature: "Standard Plan Price", values: ["₹999/mo", "$32/mo (~₹2,700)", "₹4,899/mo", "₹999/mo", "₹2,499/mo"], wraftBest: true },
+  { feature: "Messages Included", values: ["2,000", "500", "1,000", "Pay per msg", "1,000"], wraftBest: true },
+  { feature: "Cost Per Message", values: ["₹0.50", "~₹5.40", "~₹4.90", "~₹1.04+", "~₹2.50"], wraftBest: true },
+  { feature: "Indian Language Focus", values: ["10+ native", "Generic 80+", "Basic", "Basic", "Basic"], wraftBest: true },
+  { feature: "Custom Branding", values: ["Included free", "$39/mo extra", "Extra cost", "Extra cost", "Extra cost"], wraftBest: true },
 ];
 
 function CellValue({ value, isWraft }) {
@@ -48,18 +50,19 @@ export default function Comparison() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-8 bg-[#0A0A0A] rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-4"
+          className="relative mb-8 bg-gradient-to-r from-[#0A0A0A] to-[#1F1F1F] rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-2xl border border-white/10 overflow-hidden"
         >
-          <div>
-            <h3 className="text-white text-lg sm:text-xl font-bold mb-1" style={{ fontFamily: 'Bricolage Grotesque' }}>
+          <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-[#25D366]/20 to-transparent rounded-full blur-3xl opacity-50" />
+          <div className="relative z-10">
+            <h3 className="text-white text-lg sm:text-2xl font-bold mb-2" style={{ fontFamily: 'Bricolage Grotesque' }}>
               ₹0.50 per message vs ₹5+ on competitors
             </h3>
-            <p className="text-white/50 text-sm">2,000 messages at ₹999/mo — that's 10x better value than Chatbase's 500 messages at ₹2,700/mo</p>
+            <p className="text-white/60 text-sm">2,000 messages at ₹999/mo — that's 10x better value than Chatbase's 500 messages at ₹2,700/mo</p>
           </div>
           <button
             data-testid="comparison-cta-btn"
             onClick={() => navigate("/register")}
-            className="flex-shrink-0 bg-[#25D366] hover:bg-[#1EAC52] text-white px-6 py-2.5 rounded-full text-sm font-semibold transition-all hover:-translate-y-0.5 flex items-center gap-2"
+            className="relative z-10 flex-shrink-0 bg-gradient-to-r from-[#25D366] to-[#1EAC52] hover:shadow-[0_4px_20px_rgba(37,211,102,0.4)] text-white px-7 py-3 rounded-full text-sm font-semibold transition-all hover:-translate-y-1 flex items-center gap-2"
           >
             Start Free <ArrowRight className="w-4 h-4" />
           </button>
@@ -70,7 +73,8 @@ export default function Comparison() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="rounded-2xl border border-[#E4E4E7] overflow-x-auto bg-white"
+          transition={{ duration: 0.5 }}
+          className="rounded-2xl border border-white/50 shadow-[0_8px_30px_rgb(0,0,0,0.04)] overflow-x-auto bg-white/70 backdrop-blur-xl"
         >
           <table className="w-full min-w-[750px]">
             <thead>

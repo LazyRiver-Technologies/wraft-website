@@ -1,4 +1,5 @@
 import { MessageCircle, Mail, Phone, MapPin } from "lucide-react";
+import WraftLogo from "@/components/ui/WraftLogo";
 
 const footerLinks = {
   Product: [
@@ -33,8 +34,11 @@ export default function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-6 gap-8 mb-16">
           {/* Brand column */}
           <div className="col-span-2">
-            <a href="/" className="text-2xl font-bold tracking-tight" style={{ fontFamily: 'Bricolage Grotesque' }}>
-              wraft<span className="text-[#25D366]">.</span>
+            <a href="/" className="flex items-center gap-2 group">
+              <WraftLogo className="w-8 h-8" stroke="white" />
+              <span className="text-2xl font-bold tracking-tight" style={{ fontFamily: 'Bricolage Grotesque' }}>
+                wraft<span className="text-[#25D366]">.</span>
+              </span>
             </a>
             <p className="text-sm text-white/50 mt-4 leading-relaxed max-w-xs">
               AI-powered WhatsApp agents for local businesses. Serve customers in their language, 24/7.

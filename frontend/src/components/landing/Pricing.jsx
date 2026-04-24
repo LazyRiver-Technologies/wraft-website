@@ -83,12 +83,13 @@ export default function Pricing() {
   const navigate = useNavigate();
 
   return (
-    <section id="pricing" data-testid="pricing-section" className="py-24 sm:py-32 bg-white">
+    <section id="pricing" data-testid="pricing-section" className="py-24 sm:py-32">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, scale: 0.95, y: 20 }}
+          whileInView={{ opacity: 1, scale: 1, y: 0 }}
           viewport={{ once: true }}
+          transition={{ duration: 0.5, type: "spring", stiffness: 100, damping: 18 }}
           className="text-center mb-16"
         >
           <p className="uppercase tracking-[0.2em] text-xs font-bold text-[#25D366] mb-4">Pricing</p>
@@ -110,24 +111,30 @@ export default function Pricing() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: i * 0.1 }}
-              className="relative"
+              transition={{ duration: 0.5, delay: i * 0.1, type: "spring", stiffness: 100, damping: 20 }}
+              className={`relative group ${plan.popular ? "z-10" : ""}`}
             >
               {plan.popular && (
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-10">
-                  <span className="bg-[#25D366] text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">
+                <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 z-20">
+                  <span className="bg-gradient-to-r from-[#25D366] to-[#1EAC52] text-white text-[10px] font-bold uppercase tracking-wider px-4 py-1.5 rounded-full shadow-[0_4px_12px_rgba(37,211,102,0.3)]">
                     Most Popular
                   </span>
                 </div>
               )}
+              {plan.popular && (
+                <div className="absolute -inset-[1px] bg-gradient-to-br from-[#25D366] via-emerald-200 to-[#1EAC52] rounded-[17px] blur-[1px] opacity-60 group-hover:opacity-100 transition-opacity duration-500" />
+              )}
+              {plan.accent && (
+                <div className="absolute -inset-[1px] bg-gradient-to-r from-gray-700 via-gray-400 to-gray-700 rounded-[17px] blur-[1px] opacity-40 group-hover:opacity-80 transition-opacity duration-500" />
+              )}
               <div
                 data-testid={`pricing-${plan.name.toLowerCase()}-card`}
-                className={`h-full rounded-2xl border p-6 sm:p-7 flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-lg ${
+                className={`relative h-full rounded-2xl border p-6 sm:p-7 flex flex-col transition-all duration-500 hover:-translate-y-2 shiny-card ${
                   plan.accent
-                    ? "bg-[#0A0A0A] border-[#0A0A0A] text-white"
+                    ? "bg-gradient-to-b from-[#0A0A0A] to-[#171717] border-[#2A2A2A] text-white hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.5)]"
                     : plan.popular
-                    ? "bg-white border-[#25D366] shadow-sm"
-                    : "bg-white border-[#E4E4E7]"
+                    ? "bg-white/95 backdrop-blur-xl border-transparent shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:shadow-[0_20px_40px_-15px_rgba(37,211,102,0.3)]"
+                    : "bg-white/80 backdrop-blur-sm border-[#E4E4E7] hover:shadow-[0_12px_30px_rgb(0,0,0,0.04)] hover:border-[#25D366]/30"
                 }`}
               >
                 <div className="mb-6">
@@ -174,12 +181,12 @@ export default function Pricing() {
                 <button
                   data-testid={`pricing-${plan.name.toLowerCase()}-btn`}
                   onClick={() => navigate("/dashboard")}
-                  className={`w-full py-3 rounded-full text-sm font-semibold transition-all duration-300 hover:-translate-y-0.5 flex items-center justify-center gap-2 ${
+                  className={`w-full py-3.5 rounded-full text-sm font-semibold transition-all duration-500 hover:-translate-y-1 flex items-center justify-center gap-2 ${
                     plan.accent
-                      ? "bg-[#25D366] text-white hover:bg-[#1EAC52]"
+                      ? "bg-white text-[#0A0A0A] hover:bg-gray-100 shadow-md"
                       : plan.popular
-                      ? "bg-[#25D366] text-white hover:bg-[#1EAC52] hover:shadow-md hover:shadow-[#25D366]/25"
-                      : "bg-[#0A0A0A] text-white hover:bg-[#25D366]"
+                      ? "bg-gradient-to-r from-[#25D366] to-[#1EAC52] text-white hover:shadow-[0_8px_20px_rgba(37,211,102,0.4)]"
+                      : "bg-[#0A0A0A] text-white hover:bg-[#25D366] hover:shadow-lg"
                   }`}
                 >
                   {plan.cta}

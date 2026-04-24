@@ -10,7 +10,7 @@ const proofPoints = [
 
 export default function SocialProof() {
   return (
-    <section data-testid="social-proof-section" className="py-10 border-y border-[#E4E4E7] bg-white">
+    <section data-testid="social-proof-section" className="py-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 10 }}

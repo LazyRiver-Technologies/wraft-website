@@ -186,7 +186,7 @@ function ProductDemo() {
 
   return (
     <div className="relative w-full max-w-[480px]">
-      <div className="rounded-2xl bg-white border border-[#E4E4E7] shadow-2xl shadow-black/10 overflow-hidden">
+      <div className="rounded-2xl bg-white/90 backdrop-blur-2xl border border-white/50 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] overflow-hidden grain">
         {/* Tab bar */}
         <div className="flex border-b border-[#E4E4E7] bg-[#FAFAFA]">
           {flowSteps.map((step, i) => (
@@ -226,23 +226,6 @@ function ProductDemo() {
         </div>
       </div>
 
-      {/* Floating badges */}
-      <motion.div
-        animate={{ y: [0, -8, 0] }}
-        transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute -top-4 -right-4 bg-white rounded-xl px-3.5 py-2.5 shadow-xl border border-[#E4E4E7] z-10"
-      >
-        <p className="text-[11px] font-bold text-[#0A0A0A]">Gemini 2.5 Flash</p>
-        <p className="text-[9px] text-[#52525B]">Powered by Google AI</p>
-      </motion.div>
-      <motion.div
-        animate={{ y: [0, 8, 0] }}
-        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-        className="absolute -bottom-4 -left-4 bg-[#0A0A0A] rounded-xl px-3.5 py-2.5 shadow-xl z-10"
-      >
-        <p className="text-[11px] font-bold text-[#25D366]">10+ Languages</p>
-        <p className="text-[9px] text-white/40">Kannada, Hindi, Tamil...</p>
-      </motion.div>
     </div>
   );
 }
@@ -260,7 +243,7 @@ export default function Hero() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* Left */}
-          <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }}>
+          <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.7, type: "spring", stiffness: 80, damping: 18 }}>
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
@@ -271,13 +254,18 @@ export default function Hero() {
               Most affordable AI WhatsApp agent in India
             </motion.div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-extrabold tracking-tighter leading-[1.08] text-[#0A0A0A] mb-5" style={{ fontFamily: 'Bricolage Grotesque' }}>
+            <motion.h1
+              initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
+              animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              transition={{ duration: 0.8, delay: 0.2, type: "spring", stiffness: 80, damping: 16 }}
+              className="text-4xl sm:text-5xl lg:text-[3.5rem] font-extrabold tracking-tighter leading-[1.08] text-[#0A0A0A] mb-5" style={{ fontFamily: 'Bricolage Grotesque' }}
+            >
               Turn WhatsApp into your{" "}
               <span className="relative inline-block">
                 <span className="relative z-10 text-[#25D366]">smartest employee</span>
-                <motion.span initial={{ width: 0 }} animate={{ width: "100%" }} transition={{ delay: 0.5, duration: 0.6 }} className="absolute bottom-1 left-0 h-3 bg-[#25D366]/15 -z-0" />
+                <motion.span initial={{ width: 0 }} animate={{ width: "100%" }} transition={{ delay: 0.8, duration: 0.6 }} className="absolute bottom-1 left-0 h-3 bg-[#25D366]/15 -z-0" />
               </span>
-            </h1>
+            </motion.h1>
 
             <p className="text-base sm:text-lg text-[#52525B] leading-relaxed mb-7 max-w-lg">
               Upload your docs. Your AI agent answers customers on WhatsApp in <strong className="text-[#0A0A0A]">Kannada, Hindi, or any language</strong> — books appointments, answers FAQs, and works 24/7. Setup takes 10 minutes.
@@ -304,10 +292,15 @@ export default function Hero() {
 
             <div className="flex items-center gap-8">
               {stats.map((s, i) => (
-                <div key={i}>
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 20, scale: 0.8 }}
+                  animate={{ opacity: 1, y: 0, scale: 1 }}
+                  transition={{ delay: 0.6 + i * 0.15, type: "spring", stiffness: 120, damping: 14 }}
+                >
                   <span className="text-xl font-extrabold text-[#0A0A0A] tracking-tight" style={{ fontFamily: 'Bricolage Grotesque' }}>{s.value}</span>
                   <span className="block text-[11px] text-[#52525B]">{s.label}</span>
-                </div>
+                </motion.div>
               ))}
             </div>
           </motion.div>

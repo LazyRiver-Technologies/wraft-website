@@ -38,12 +38,13 @@ export default function TryItSection() {
   };
 
   return (
-    <section id="try-it" data-testid="try-it-section" className="py-24 sm:py-32">
+    <section id="try-it" data-testid="try-it-section" className="py-16 lg:py-24">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
+          transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
           className="text-center mb-10"
         >
           <div className="inline-flex items-center gap-2 bg-[#25D366]/10 text-[#25D366] text-[11px] font-bold uppercase tracking-wider px-4 py-1.5 rounded-full mb-4">
@@ -61,6 +62,7 @@ export default function TryItSection() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.1, ease: [0.25, 0.1, 0.25, 1] }}
           className="bg-white/70 backdrop-blur-xl rounded-2xl border border-white/50 p-6 sm:p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)]"
         >
           {/* Tabs */}

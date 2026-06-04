@@ -4,28 +4,28 @@ import { useNavigate } from "react-router-dom";
 
 const plans = [
   {
-    name: "Free",
+    name: "Trial",
     price: "0",
-    period: "forever",
-    messages: "50 messages/mo",
-    description: "Try Wraft with no commitment",
+    period: "/1 month",
+    messages: "50 messages included",
+    description: "Try Wraft free for 30 days",
     features: [
-      "50 AI messages per month",
+      "50 AI messages",
       "1 WhatsApp agent",
       "Basic document upload",
       "Website preview",
       "Community support",
     ],
-    cta: "Start Free",
+    cta: "Start Free Trial",
     popular: false,
     accent: false,
   },
   {
-    name: "Standard",
+    name: "Starter",
     price: "999",
     period: "/month",
     messages: "2,000 messages/mo",
-    description: "Perfect for growing businesses",
+    description: "Perfect for small businesses",
     features: [
       "2,000 AI messages per month",
       "WhatsApp + Website integration",
@@ -40,14 +40,14 @@ const plans = [
     accent: false,
   },
   {
-    name: "Pro",
-    price: "1,899",
+    name: "Growth",
+    price: "1,999",
     period: "/month",
     messages: "8,000 messages/mo",
-    description: "For high-traffic businesses",
+    description: "For growing businesses",
     features: [
       "8,000 AI messages per month",
-      "Everything in Standard",
+      "Everything in Starter",
       "Priority support",
       "Advanced analytics",
       "Custom branding",
@@ -56,17 +56,17 @@ const plans = [
     ],
     cta: "Get Started",
     popular: false,
-    accent: true,
+    accent: false,
   },
   {
-    name: "Business",
+    name: "Scale",
     price: "4,999",
     period: "/month",
     messages: "40,000 messages/mo",
     description: "Enterprise-grade for large operations",
     features: [
       "40,000 AI messages per month",
-      "Everything in Pro",
+      "Everything in Growth",
       "Dedicated account manager",
       "24/7 phone support",
       "Custom integrations",
@@ -75,7 +75,7 @@ const plans = [
     ],
     cta: "Contact Sales",
     popular: false,
-    accent: false,
+    accent: true,
   },
 ];
 
@@ -83,13 +83,13 @@ export default function Pricing() {
   const navigate = useNavigate();
 
   return (
-    <section id="pricing" data-testid="pricing-section" className="py-24 sm:py-32">
+    <section id="pricing" data-testid="pricing-section" className="py-16 lg:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, scale: 0.95, y: 20 }}
           whileInView={{ opacity: 1, scale: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5, type: "spring", stiffness: 100, damping: 18 }}
+          transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
           className="text-center mb-16"
         >
           <p className="uppercase tracking-[0.2em] text-xs font-bold text-[#25D366] mb-4">Pricing</p>
@@ -100,7 +100,7 @@ export default function Pricing() {
             Simple, transparent pricing
           </h2>
           <p className="text-base sm:text-lg text-[#52525B] max-w-2xl mx-auto">
-            Start free. Scale as you grow. No hidden fees, no surprises.
+            Start with a free trial. Scale as you grow. No hidden fees, no surprises.
           </p>
         </motion.div>
 
@@ -111,7 +111,7 @@ export default function Pricing() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.1, type: "spring", stiffness: 100, damping: 20 }}
+              transition={{ duration: 0.8, delay: i * 0.1, ease: [0.25, 0.1, 0.25, 1] }}
               className={`relative group ${plan.popular ? "z-10" : ""}`}
             >
               {plan.popular && (
@@ -162,7 +162,7 @@ export default function Pricing() {
                       {plan.period}
                     </span>
                   </div>
-                  <p className={`text-xs mt-1 font-medium ${plan.accent ? "text-[#25D366]" : "text-[#25D366]"}`}>
+                  <p className={`text-xs mt-1 font-medium text-[#25D366]`}>
                     {plan.messages}
                   </p>
                 </div>
@@ -170,7 +170,7 @@ export default function Pricing() {
                 <ul className="space-y-3 mb-8 flex-1">
                   {plan.features.map((feature, j) => (
                     <li key={j} className="flex items-start gap-2.5">
-                      <Check className={`w-4 h-4 mt-0.5 flex-shrink-0 ${plan.accent ? "text-[#25D366]" : "text-[#25D366]"}`} />
+                      <Check className={`w-4 h-4 mt-0.5 flex-shrink-0 text-[#25D366]`} />
                       <span className={`text-sm ${plan.accent ? "text-white/80" : "text-[#52525B]"}`}>
                         {feature}
                       </span>

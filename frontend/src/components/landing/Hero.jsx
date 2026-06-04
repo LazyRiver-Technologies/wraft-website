@@ -234,7 +234,7 @@ export default function Hero() {
   const navigate = useNavigate();
 
   return (
-    <section data-testid="hero-section" className="relative pt-24 pb-12 sm:pt-32 sm:pb-20 overflow-hidden">
+    <section data-testid="hero-section" className="relative pt-32 pb-16 sm:pt-40 lg:pb-24 overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-20 left-10 w-72 h-72 bg-[#25D366]/5 rounded-full blur-3xl" />
         <div className="absolute bottom-10 right-10 w-96 h-96 bg-[#B5C9B3]/10 rounded-full blur-3xl" />
@@ -243,7 +243,7 @@ export default function Hero() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* Left */}
-          <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.7, type: "spring", stiffness: 80, damping: 18 }}>
+          <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}>
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
@@ -257,7 +257,7 @@ export default function Hero() {
             <motion.h1
               initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
               animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-              transition={{ duration: 0.8, delay: 0.2, type: "spring", stiffness: 80, damping: 16 }}
+              transition={{ duration: 1.0, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
               className="text-4xl sm:text-5xl lg:text-[3.5rem] font-extrabold tracking-tighter leading-[1.08] text-[#0A0A0A] mb-5" style={{ fontFamily: 'Bricolage Grotesque' }}
             >
               Turn WhatsApp into your{" "}
@@ -296,7 +296,7 @@ export default function Hero() {
                   key={i}
                   initial={{ opacity: 0, y: 20, scale: 0.8 }}
                   animate={{ opacity: 1, y: 0, scale: 1 }}
-                  transition={{ delay: 0.6 + i * 0.15, type: "spring", stiffness: 120, damping: 14 }}
+                  transition={{ duration: 0.8, delay: 0.6 + i * 0.15, ease: [0.25, 0.1, 0.25, 1] }}
                 >
                   <span className="text-xl font-extrabold text-[#0A0A0A] tracking-tight" style={{ fontFamily: 'Bricolage Grotesque' }}>{s.value}</span>
                   <span className="block text-[11px] text-[#52525B]">{s.label}</span>
@@ -309,7 +309,7 @@ export default function Hero() {
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
             className="flex justify-center lg:justify-end"
           >
             <ProductDemo />

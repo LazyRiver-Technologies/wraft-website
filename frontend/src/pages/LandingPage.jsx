@@ -5,6 +5,7 @@ import Hero from "@/components/landing/Hero";
 import SocialProof from "@/components/landing/SocialProof";
 import LanguageMarquee from "@/components/landing/LanguageMarquee";
 import Features from "@/components/landing/Features";
+import FeatureShowcase from "@/components/landing/FeatureShowcase";
 import HowItWorks from "@/components/landing/HowItWorks";
 import TryItSection from "@/components/landing/TryItSection";
 import Comparison from "@/components/landing/Comparison";
@@ -37,13 +38,12 @@ export default function LandingPage() {
       
       <div className="absolute top-0 inset-x-0 w-full h-[600px] bg-gradient-to-b from-[#25D366]/10 to-transparent pointer-events-none opacity-50 z-0" />
 
-      <div className="relative z-10 w-full">
+      <div className="relative z-10 w-full flex flex-col gap-0">
         <Navbar />
         <Hero />
         <SocialProof />
         <LanguageMarquee />
 
-        {/* Features with parallax + ambient glow */}
         <div className="relative">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-gradient-to-b from-[#25D366]/8 to-transparent blur-3xl rounded-full pointer-events-none" />
           <ParallaxSection speed={0.05}>
@@ -53,17 +53,17 @@ export default function LandingPage() {
 
         <HowItWorks />
 
-        {/* TryIt — tight gap, with side glow */}
-        <div className="relative -mt-8">
+        <div className="relative">
           <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[400px] h-[400px] bg-gradient-to-l from-[#25D366]/6 to-transparent blur-3xl rounded-full pointer-events-none" />
           <TryItSection />
         </div>
+
+        <FeatureShowcase />
 
         <ParallaxSection speed={0.08}>
           <Comparison />
         </ParallaxSection>
 
-        {/* Pricing with glow */}
         <div className="relative">
           <div className="absolute top-0 left-1/4 w-[500px] h-[400px] bg-gradient-to-br from-[#25D366]/6 to-transparent blur-3xl rounded-full pointer-events-none" />
           <Pricing />

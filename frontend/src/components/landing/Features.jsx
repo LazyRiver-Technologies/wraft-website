@@ -125,18 +125,18 @@ const containerVariants = {
 
 const itemVariants = {
   hidden: { opacity: 0, y: 40, scale: 0.95 },
-  visible: { opacity: 1, y: 0, scale: 1, transition: { type: "spring", stiffness: 120, damping: 14 } },
+  visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.8, ease: [0.25, 0.1, 0.25, 1] } },
 };
 
 export default function Features() {
   return (
-    <section id="features" data-testid="features-section" className="py-24 sm:py-32">
+    <section id="features" data-testid="features-section" className="py-16 lg:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30, filter: "blur(8px)" }}
           whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, type: "spring", stiffness: 80, damping: 16 }}
+          transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
           className="text-center mb-16"
         >
           <p className="uppercase tracking-[0.2em] text-xs font-bold text-[#25D366] mb-4">What You Get</p>

@@ -33,7 +33,7 @@ export default function Comparison() {
   const navigate = useNavigate();
 
   return (
-    <section id="comparison" data-testid="comparison-section" className="py-24 sm:py-32">
+    <section id="comparison" data-testid="comparison-section" className="py-16 lg:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
           <p className="uppercase tracking-[0.2em] text-xs font-bold text-[#25D366] mb-4">Compare</p>

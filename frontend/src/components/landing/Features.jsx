@@ -25,11 +25,11 @@ const features = [
   },
   {
     icon: <Brain className="w-6 h-6 text-[#25D366]" strokeWidth={2.5} />,
-    title: "Powered by Gemini 2.5 Flash",
-    description: "Not a keyword matcher. A real AI that understands context, handles follow-ups, and gives relevant answers.",
+    title: "Understands Context, Not Just Keywords",
+    description: "Ask a follow-up question, change languages mid-chat, or throw in slang — your agent keeps up effortlessly.",
     span: "md:col-span-6 lg:col-span-6",
     status: "Smart",
-    tags: ["Google AI", "Fast Fast"],
+    tags: ["Contextual", "Fast"],
     accent: false,
   },
   {
@@ -142,7 +142,7 @@ export default function Features() {
           <p className="uppercase tracking-[0.2em] text-xs font-bold text-[#25D366] mb-4">What You Get</p>
           <h2
             className="text-4xl sm:text-5xl font-bold tracking-tight text-[#0A0A0A] mb-4"
-            style={{ fontFamily: 'Bricolage Grotesque' }}
+            style={{ fontFamily: 'Satoshi' }}
           >
             Everything your business needs,
             <br />
@@ -209,7 +209,7 @@ export default function Features() {
                       <h3 className={cn(
                         "text-xl font-bold tracking-tight",
                         item.accent ? "text-white" : "text-[#0A0A0A]"
-                      )} style={{ fontFamily: 'Bricolage Grotesque' }}>
+                      )} style={{ fontFamily: 'Satoshi' }}>
                           {item.title}
                       </h3>
                       <p className={cn(

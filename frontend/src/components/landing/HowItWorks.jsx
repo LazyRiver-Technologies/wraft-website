@@ -14,7 +14,7 @@ const steps = [
     number: "02",
     icon: Bot,
     title: "AI learns everything in seconds",
-    subtitle: "Gemini 2.5 Flash reads, understands context, and builds your agent's brain.",
+    subtitle: "Our AI reads, understands context, and builds your agent's brain.",
   },
   {
     number: "03",
@@ -102,7 +102,7 @@ function StepDemo({ stepIndex }) {
             >
               <Bot className="w-7 h-7 text-[#25D366]" />
             </motion.div>
-            <p className="text-sm font-bold text-[#0A0A0A]">Training with Gemini 2.5 Flash</p>
+            <p className="text-sm font-bold text-[#0A0A0A]">Training your AI agent</p>
           </div>
           <div className="space-y-3 mb-6">
             {["Parsed 147 FAQ entries", "Indexed 23 services", "Mapped 56 time slots", "Ready for 10+ languages"].map((item, i) => (
@@ -273,7 +273,7 @@ export default function HowItWorks() {
           <p className="uppercase tracking-[0.2em] text-xs font-bold text-[#25D366] mb-4">How It Works</p>
           <h2
             className="text-4xl sm:text-5xl font-bold tracking-tight text-[#0A0A0A] mb-4"
-            style={{ fontFamily: 'Bricolage Grotesque' }}
+            style={{ fontFamily: 'Satoshi' }}
           >
             From zero to live in 10 minutes
           </h2>

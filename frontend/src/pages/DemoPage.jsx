@@ -33,8 +33,8 @@ function LearningAnimation({ sourceName, onComplete }) {
       >
         <Bot className="w-9 h-9 text-[#25D366]" />
       </motion.div>
-      <h2 className="text-2xl font-bold text-[#0A0A0A] mb-2" style={{ fontFamily: 'Bricolage Grotesque' }}>
-        Gemini is learning your data
+      <h2 className="text-2xl font-bold text-[#0A0A0A] mb-2" style={{ fontFamily: 'Satoshi' }}>
+        AI is learning your data
       </h2>
       <p className="text-sm text-[#52525B] mb-8">Source: {sourceName}</p>
 
@@ -130,7 +130,7 @@ export default function DemoPage() {
     <div data-testid="demo-page" className="min-h-screen bg-[#FAFAFA]">
       <nav className="border-b border-[#E4E4E7] bg-white px-6 py-3">
         <div className="flex items-center justify-between max-w-4xl mx-auto">
-          <Link to="/" className="text-xl font-bold tracking-tight" style={{ fontFamily: 'Bricolage Grotesque' }}>
+          <Link to="/" className="text-xl font-bold tracking-tight" style={{ fontFamily: 'Satoshi' }}>
             wraft<span className="text-[#25D366]">.</span>
           </Link>
           <div className="flex items-center gap-3">
@@ -149,7 +149,7 @@ export default function DemoPage() {
                 <div className="inline-flex items-center gap-2 bg-[#25D366]/10 text-[#25D366] text-[11px] font-bold uppercase tracking-wider px-4 py-1.5 rounded-full mb-4">
                   <Sparkles className="w-3.5 h-3.5" /> Live Demo
                 </div>
-                <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#0A0A0A] mb-3" style={{ fontFamily: 'Bricolage Grotesque' }}>
+                <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#0A0A0A] mb-3" style={{ fontFamily: 'Satoshi' }}>
                   Try Wraft AI — Right Now
                 </h1>
                 <p className="text-base text-[#52525B] max-w-lg mx-auto">
@@ -216,7 +216,7 @@ export default function DemoPage() {
           {step === "chat" && (
             <motion.div key="chat" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }}>
               <div className="text-center mb-6">
-                <h2 className="text-xl font-bold text-[#0A0A0A]" style={{ fontFamily: 'Bricolage Grotesque' }}>Your AI Agent is Ready</h2>
+                <h2 className="text-xl font-bold text-[#0A0A0A]" style={{ fontFamily: 'Satoshi' }}>Your AI Agent is Ready</h2>
                 <p className="text-xs text-[#52525B]">Source: {sourceName} — Ask it anything about your data</p>
               </div>
               <div className="bg-white rounded-2xl border border-[#E4E4E7] overflow-hidden max-w-2xl mx-auto shadow-sm">
@@ -226,7 +226,7 @@ export default function DemoPage() {
                   </div>
                   <div className="flex-1">
                     <p className="text-white text-sm font-semibold">Wraft AI Demo</p>
-                    <p className="text-white/60 text-[10px]">Powered by Gemini 2.5 Flash</p>
+                    <p className="text-white/60 text-[10px]">Powered by Wraft AI</p>
                   </div>
                   <div className="flex items-center gap-1"><div className="w-2 h-2 rounded-full bg-[#25D366] animate-pulse" /><span className="text-[10px] text-white/40">live</span></div>
                 </div>
@@ -271,7 +271,7 @@ export default function DemoPage() {
                 <div className="w-16 h-16 rounded-full bg-[#25D366]/10 flex items-center justify-center mx-auto mb-5">
                   <Sparkles className="w-8 h-8 text-[#25D366]" />
                 </div>
-                <h2 className="text-2xl font-bold text-[#0A0A0A] mb-2" style={{ fontFamily: 'Bricolage Grotesque' }}>
+                <h2 className="text-2xl font-bold text-[#0A0A0A] mb-2" style={{ fontFamily: 'Satoshi' }}>
                   Impressed? Get unlimited access.
                 </h2>
                 <p className="text-sm text-[#52525B] mb-8 leading-relaxed">

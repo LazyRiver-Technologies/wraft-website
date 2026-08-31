@@ -38,7 +38,7 @@ export default function Testimonials() {
           <p className="uppercase tracking-[0.2em] text-xs font-bold text-[#25D366] mb-4">Testimonials</p>
           <h2
             className="text-4xl sm:text-5xl font-bold tracking-tight text-[#0A0A0A] mb-4"
-            style={{ fontFamily: 'Bricolage Grotesque' }}
+            style={{ fontFamily: 'Satoshi' }}
           >
             Loved by local businesses
           </h2>

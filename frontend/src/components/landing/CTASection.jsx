@@ -23,7 +23,7 @@ export default function CTASection() {
           <div className="relative z-10">
             <h2
               className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white mb-4"
-              style={{ fontFamily: 'Bricolage Grotesque' }}
+              style={{ fontFamily: 'Satoshi' }}
             >
               Ready to automate your
               <br />
@@ -35,7 +35,7 @@ export default function CTASection() {
             <div className="flex flex-wrap items-center justify-center gap-4">
               <button
                 data-testid="cta-get-started-btn"
-                onClick={() => navigate("/dashboard")}
+                onClick={() => window.location.href = "https://wraft-git-vercel-react-server-compone-80e2d6-lazyrivertech-6835.vercel.app/login"}
                 className="group bg-[#25D366] hover:bg-[#1EAC52] text-white px-8 py-3.5 rounded-full font-semibold text-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[#25D366]/25 flex items-center gap-2"
               >
                 Start Free Today

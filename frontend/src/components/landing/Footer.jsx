@@ -36,7 +36,7 @@ export default function Footer() {
           <div className="col-span-2">
             <a href="/" className="flex items-center gap-2 group">
               <WraftLogo className="w-8 h-8" stroke="white" />
-              <span className="text-2xl font-bold tracking-tight" style={{ fontFamily: 'Bricolage Grotesque' }}>
+              <span className="text-2xl font-bold tracking-tight" style={{ fontFamily: 'Satoshi' }}>
                 wraft<span className="text-[#25D366]">.</span>
               </span>
             </a>
@@ -91,7 +91,7 @@ export default function Footer() {
         <div className="mt-16 text-center">
           <span
             className="text-[8rem] sm:text-[12rem] font-bold tracking-tighter text-white/[0.03] leading-none select-none"
-            style={{ fontFamily: 'Bricolage Grotesque' }}
+            style={{ fontFamily: 'Satoshi' }}
           >
             wraft
           </span>

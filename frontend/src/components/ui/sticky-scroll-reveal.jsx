@@ -147,7 +147,7 @@ export const StickyScroll = ({
                         "text-3xl lg:text-4xl font-bold transition-colors duration-700",
                         activeCard === index ? "text-[#0A0A0A]" : "text-[#A1A1AA]"
                       )}
-                      style={{ fontFamily: 'Bricolage Grotesque' }}
+                      style={{ fontFamily: 'Satoshi' }}
                     >
                       {item.title}
                     </h2>

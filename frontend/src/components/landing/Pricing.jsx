@@ -95,7 +95,7 @@ export default function Pricing() {
           <p className="uppercase tracking-[0.2em] text-xs font-bold text-[#25D366] mb-4">Pricing</p>
           <h2
             className="text-4xl sm:text-5xl font-bold tracking-tight text-[#0A0A0A] mb-4"
-            style={{ fontFamily: 'Bricolage Grotesque' }}
+            style={{ fontFamily: 'Satoshi' }}
           >
             Simple, transparent pricing
           </h2>
@@ -140,7 +140,7 @@ export default function Pricing() {
                 <div className="mb-6">
                   <h3
                     className={`text-lg font-bold mb-1 ${plan.accent ? "text-white" : "text-[#0A0A0A]"}`}
-                    style={{ fontFamily: 'Bricolage Grotesque' }}
+                    style={{ fontFamily: 'Satoshi' }}
                   >
                     {plan.name}
                   </h3>
@@ -154,7 +154,7 @@ export default function Pricing() {
                     <span className={`text-sm ${plan.accent ? "text-white/60" : "text-[#52525B]"}`}>&#8377;</span>
                     <span
                       className={`text-4xl font-bold tracking-tight ${plan.accent ? "text-white" : "text-[#0A0A0A]"}`}
-                      style={{ fontFamily: 'Bricolage Grotesque' }}
+                      style={{ fontFamily: 'Satoshi' }}
                     >
                       {plan.price}
                     </span>
@@ -180,7 +180,7 @@ export default function Pricing() {
 
                 <button
                   data-testid={`pricing-${plan.name.toLowerCase()}-btn`}
-                  onClick={() => navigate("/dashboard")}
+                  onClick={() => window.location.href = "https://wraft-git-vercel-react-server-compone-80e2d6-lazyrivertech-6835.vercel.app/login"}
                   className={`w-full py-3.5 rounded-full text-sm font-semibold transition-all duration-500 hover:-translate-y-1 flex items-center justify-center gap-2 ${
                     plan.accent
                       ? "bg-white text-[#0A0A0A] hover:bg-gray-100 shadow-md"

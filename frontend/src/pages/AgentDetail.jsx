@@ -201,7 +201,7 @@ export default function AgentDetail() {
           <Link to="/dashboard" className="flex items-center gap-2 text-sm text-[#52525B] hover:text-[#0A0A0A]">
             <ArrowLeft className="w-4 h-4" /> Dashboard
           </Link>
-          <span className="text-sm font-bold text-[#0A0A0A]" style={{ fontFamily: 'Bricolage Grotesque' }}>{bot.name}</span>
+          <span className="text-sm font-bold text-[#0A0A0A]" style={{ fontFamily: 'Satoshi' }}>{bot.name}</span>
           <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${bot.is_active ? "bg-[#25D366]/10 text-[#25D366]" : "bg-red-50 text-red-500"}`}>
             {bot.is_active ? "Active" : "Inactive"}
           </span>
@@ -240,11 +240,11 @@ export default function AgentDetail() {
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-[#FAFAFA] rounded-lg p-4 border border-[#E4E4E7]/50">
                   <p className="text-xs text-[#52525B]">Messages</p>
-                  <p className="text-xl font-bold" style={{ fontFamily: 'Bricolage Grotesque' }}>{bot.message_count || 0}</p>
+                  <p className="text-xl font-bold" style={{ fontFamily: 'Satoshi' }}>{bot.message_count || 0}</p>
                 </div>
                 <div className="bg-[#FAFAFA] rounded-lg p-4 border border-[#E4E4E7]/50">
                   <p className="text-xs text-[#52525B]">Sources</p>
-                  <p className="text-xl font-bold" style={{ fontFamily: 'Bricolage Grotesque' }}>{bot.source_count || 0}</p>
+                  <p className="text-xl font-bold" style={{ fontFamily: 'Satoshi' }}>{bot.source_count || 0}</p>
                 </div>
               </div>
             </div>

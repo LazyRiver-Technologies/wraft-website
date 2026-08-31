@@ -50,7 +50,7 @@ export default function TryItSection() {
           <div className="inline-flex items-center gap-2 bg-[#25D366]/10 text-[#25D366] text-[11px] font-bold uppercase tracking-wider px-4 py-1.5 rounded-full mb-4">
             <Sparkles className="w-3.5 h-3.5" /> Try It Now — Free
           </div>
-          <h2 className="text-4xl sm:text-5xl font-bold tracking-tight text-[#0A0A0A] mb-4" style={{ fontFamily: 'Bricolage Grotesque' }}>
+          <h2 className="text-4xl sm:text-5xl font-bold tracking-tight text-[#0A0A0A] mb-4" style={{ fontFamily: 'Satoshi' }}>
             See the magic yourself
           </h2>
           <p className="text-base sm:text-lg text-[#52525B] max-w-xl mx-auto">

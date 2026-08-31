@@ -631,7 +631,7 @@ export default function FeatureShowcase() {
           </p>
           <h2
             className="text-4xl sm:text-5xl font-bold tracking-tight text-[#0A0A0A] mb-4"
-            style={{ fontFamily: "Bricolage Grotesque" }}
+            style={{ fontFamily: "Satoshi" }}
           >
             Real automation.
             <br />
@@ -713,7 +713,7 @@ export default function FeatureShowcase() {
                         </p>
                         <h3
                           className="text-base lg:text-lg font-bold text-[#0A0A0A] mb-1.5"
-                          style={{ fontFamily: "Bricolage Grotesque" }}
+                          style={{ fontFamily: "Satoshi" }}
                         >
                           {f.title}
                         </h3>

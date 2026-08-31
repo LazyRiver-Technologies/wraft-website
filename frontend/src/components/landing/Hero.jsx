@@ -90,7 +90,7 @@ function TrainScreen() {
             <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" />
           </svg>
         </motion.div>
-        <p className="text-sm font-bold text-[#0A0A0A]">Gemini 2.5 Flash is learning...</p>
+        <p className="text-sm font-bold text-[#0A0A0A]">Your AI agent is learning...</p>
         <p className="text-[11px] text-[#52525B] mt-0.5">This usually takes under 30 seconds</p>
       </div>
       <div className="space-y-3 mb-5">
@@ -258,7 +258,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
               animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
               transition={{ duration: 1.0, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
-              className="text-4xl sm:text-5xl lg:text-[3.5rem] font-extrabold tracking-tighter leading-[1.08] text-[#0A0A0A] mb-5" style={{ fontFamily: 'Bricolage Grotesque' }}
+              className="text-4xl sm:text-5xl lg:text-[3.5rem] font-extrabold tracking-tighter leading-[1.08] text-[#0A0A0A] mb-5" style={{ fontFamily: 'Satoshi' }}
             >
               Turn WhatsApp into your{" "}
               <span className="relative inline-block">
@@ -274,7 +274,7 @@ export default function Hero() {
             <div className="flex flex-wrap items-center gap-3 mb-8">
               <button
                 data-testid="hero-cta-button"
-                onClick={() => navigate("/register")}
+                onClick={() => window.location.href = "https://wraft-git-vercel-react-server-compone-80e2d6-lazyrivertech-6835.vercel.app/login"}
                 className="group bg-[#25D366] hover:bg-[#1EAC52] text-white px-7 py-3.5 rounded-full font-semibold text-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[#25D366]/25 flex items-center gap-2"
               >
                 Start Free — 50 Messages
@@ -298,7 +298,7 @@ export default function Hero() {
                   animate={{ opacity: 1, y: 0, scale: 1 }}
                   transition={{ duration: 0.8, delay: 0.6 + i * 0.15, ease: [0.25, 0.1, 0.25, 1] }}
                 >
-                  <span className="text-xl font-extrabold text-[#0A0A0A] tracking-tight" style={{ fontFamily: 'Bricolage Grotesque' }}>{s.value}</span>
+                  <span className="text-xl font-extrabold text-[#0A0A0A] tracking-tight" style={{ fontFamily: 'Satoshi' }}>{s.value}</span>
                   <span className="block text-[11px] text-[#52525B]">{s.label}</span>
                 </motion.div>
               ))}

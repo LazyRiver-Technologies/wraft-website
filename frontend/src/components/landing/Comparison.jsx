@@ -9,7 +9,7 @@ const rows = [
   { feature: "WhatsApp Integration", values: [true, true, true, true, true], wraftBest: false },
   { feature: "Free Setup & Onboarding", values: [true, false, false, false, false], wraftBest: true },
   { feature: "24/7 Support (All Plans)", values: [true, false, false, false, false], wraftBest: true },
-  { feature: "RAG Document Training", values: [true, true, false, false, false], wraftBest: true },
+  { feature: "Train AI on Your Documents", values: [true, true, false, false, false], wraftBest: true },
   { feature: "Appointment Booking", values: [true, "Via 3rd party", false, false, false], wraftBest: true },
   // Value comparison rows
   { feature: "Standard Plan Price", values: ["₹999/mo", "$32/mo (~₹2,700)", "₹4,899/mo", "₹999/mo", "₹2,499/mo"], wraftBest: true },
@@ -37,7 +37,7 @@ export default function Comparison() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
           <p className="uppercase tracking-[0.2em] text-xs font-bold text-[#25D366] mb-4">Compare</p>
-          <h2 className="text-4xl sm:text-5xl font-bold tracking-tight text-[#0A0A0A] mb-4" style={{ fontFamily: 'Bricolage Grotesque' }}>
+          <h2 className="text-4xl sm:text-5xl font-bold tracking-tight text-[#0A0A0A] mb-4" style={{ fontFamily: 'Satoshi' }}>
             Why businesses choose Wraft
           </h2>
           <p className="text-base sm:text-lg text-[#52525B] max-w-2xl mx-auto">
@@ -54,14 +54,14 @@ export default function Comparison() {
         >
           <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-[#25D366]/20 to-transparent rounded-full blur-3xl opacity-50" />
           <div className="relative z-10">
-            <h3 className="text-white text-lg sm:text-2xl font-bold mb-2" style={{ fontFamily: 'Bricolage Grotesque' }}>
+            <h3 className="text-white text-lg sm:text-2xl font-bold mb-2" style={{ fontFamily: 'Satoshi' }}>
               ₹0.50 per message vs ₹5+ on competitors
             </h3>
             <p className="text-white/60 text-sm">2,000 messages at ₹999/mo — that's 10x better value than Chatbase's 500 messages at ₹2,700/mo</p>
           </div>
           <button
             data-testid="comparison-cta-btn"
-            onClick={() => navigate("/register")}
+            onClick={() => window.location.href = "https://wraft-git-vercel-react-server-compone-80e2d6-lazyrivertech-6835.vercel.app/login"}
             className="relative z-10 flex-shrink-0 bg-gradient-to-r from-[#25D366] to-[#1EAC52] hover:shadow-[0_4px_20px_rgba(37,211,102,0.4)] text-white px-7 py-3 rounded-full text-sm font-semibold transition-all hover:-translate-y-1 flex items-center gap-2"
           >
             Start Free <ArrowRight className="w-4 h-4" />
@@ -79,12 +79,12 @@ export default function Comparison() {
           <table className="w-full min-w-[750px]">
             <thead>
               <tr className="border-b-2 border-[#E4E4E7]">
-                <th className="text-left text-[13px] font-bold text-[#0A0A0A] p-5 w-[200px]" style={{ fontFamily: 'Bricolage Grotesque' }}>Feature</th>
+                <th className="text-left text-[13px] font-bold text-[#0A0A0A] p-5 w-[200px]" style={{ fontFamily: 'Satoshi' }}>Feature</th>
                 {competitors.map((c, i) => (
                   <th key={c} className={`text-center p-5 ${i === 0 ? "bg-[#25D366]/[0.04]" : ""}`}>
                     {i === 0 ? (
                       <div className="flex flex-col items-center gap-1.5">
-                        <span className="text-base font-extrabold text-[#0A0A0A]" style={{ fontFamily: 'Bricolage Grotesque' }}>
+                        <span className="text-base font-extrabold text-[#0A0A0A]" style={{ fontFamily: 'Satoshi' }}>
                           wraft<span className="text-[#25D366]">.</span>
                         </span>
                         <span className="inline-flex items-center gap-1 text-[9px] font-bold bg-[#25D366] text-white px-2.5 py-0.5 rounded-full">
@@ -92,7 +92,7 @@ export default function Comparison() {
                         </span>
                       </div>
                     ) : (
-                      <span className="text-[13px] font-bold text-[#0A0A0A]" style={{ fontFamily: 'Bricolage Grotesque' }}>{c}</span>
+                      <span className="text-[13px] font-bold text-[#0A0A0A]" style={{ fontFamily: 'Satoshi' }}>{c}</span>
                     )}
                   </th>
                 ))}

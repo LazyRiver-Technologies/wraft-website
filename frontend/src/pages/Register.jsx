@@ -28,10 +28,10 @@ export default function Register() {
     <div data-testid="register-page" className="min-h-screen bg-[#FAFAFA] flex items-center justify-center px-4">
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
-          <Link to="/" className="text-2xl font-bold tracking-tight" style={{ fontFamily: 'Bricolage Grotesque' }}>
+          <Link to="/" className="text-2xl font-bold tracking-tight" style={{ fontFamily: 'Satoshi' }}>
             wraft<span className="text-[#25D366]">.</span>
           </Link>
-          <h1 className="text-2xl font-bold mt-6 text-[#0A0A0A]" style={{ fontFamily: 'Bricolage Grotesque' }}>Create your account</h1>
+          <h1 className="text-2xl font-bold mt-6 text-[#0A0A0A]" style={{ fontFamily: 'Satoshi' }}>Create your account</h1>
           <p className="text-sm text-[#52525B] mt-1">Start with 50 free messages — no credit card needed</p>
         </div>
         <form onSubmit={handleSubmit} className="bg-white rounded-2xl border border-[#E4E4E7] p-8 shadow-sm">

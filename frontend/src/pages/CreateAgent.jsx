@@ -88,7 +88,7 @@ export default function CreateAgent() {
         {/* Step 0: Name */}
         {step === 0 && (
           <div className="bg-white rounded-2xl border border-[#E4E4E7] p-8">
-            <h2 className="text-xl font-bold mb-1 text-[#0A0A0A]" style={{ fontFamily: 'Bricolage Grotesque' }}>Create your AI agent</h2>
+            <h2 className="text-xl font-bold mb-1 text-[#0A0A0A]" style={{ fontFamily: 'Satoshi' }}>Create your AI agent</h2>
             <p className="text-sm text-[#52525B] mb-6">Give it a name and tell it how to behave.</p>
             <div className="space-y-4">
               <div>
@@ -126,7 +126,7 @@ export default function CreateAgent() {
         {step === 1 && (
           <div className="space-y-6">
             <div className="bg-white rounded-2xl border border-[#E4E4E7] p-8">
-              <h2 className="text-xl font-bold mb-1 text-[#0A0A0A]" style={{ fontFamily: 'Bricolage Grotesque' }}>Add data sources</h2>
+              <h2 className="text-xl font-bold mb-1 text-[#0A0A0A]" style={{ fontFamily: 'Satoshi' }}>Add data sources</h2>
               <p className="text-sm text-[#52525B] mb-6">Your agent will answer questions from this data.</p>
 
               <div className="flex gap-2 mb-4">
@@ -212,7 +212,7 @@ export default function CreateAgent() {
             <div className="w-16 h-16 rounded-full bg-[#25D366]/10 flex items-center justify-center mx-auto mb-4">
               <Check className="w-8 h-8 text-[#25D366]" />
             </div>
-            <h2 className="text-2xl font-bold mb-2 text-[#0A0A0A]" style={{ fontFamily: 'Bricolage Grotesque' }}>Agent Created!</h2>
+            <h2 className="text-2xl font-bold mb-2 text-[#0A0A0A]" style={{ fontFamily: 'Satoshi' }}>Agent Created!</h2>
             <p className="text-sm text-[#52525B] mb-6 max-w-md mx-auto">
               <strong>{name}</strong> is ready with {sources.length} data source(s). You can now test it, connect WhatsApp, or customize settings.
             </p>

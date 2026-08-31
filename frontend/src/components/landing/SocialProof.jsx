@@ -22,7 +22,7 @@ export default function SocialProof() {
             <div key={i} className="flex flex-col items-center text-center">
               <span
                 className="text-xl sm:text-2xl font-extrabold text-[#0A0A0A] tracking-tight"
-                style={{ fontFamily: 'Bricolage Grotesque' }}
+                style={{ fontFamily: 'Satoshi' }}
               >
                 {p.value}
               </span>

@@ -274,7 +274,7 @@ export default function Hero() {
             <div className="flex flex-wrap items-center gap-3 mb-8">
               <button
                 data-testid="hero-cta-button"
-                onClick={() => window.location.href = "https://wraft-git-vercel-react-server-compone-80e2d6-lazyrivertech-6835.vercel.app/login"}
+                onClick={() => window.location.href = "https://wraft-ten.vercel.app/"}
                 className="group bg-[#25D366] hover:bg-[#1EAC52] text-white px-7 py-3.5 rounded-full font-semibold text-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[#25D366]/25 flex items-center gap-2"
               >
                 Start Free — 50 Messages

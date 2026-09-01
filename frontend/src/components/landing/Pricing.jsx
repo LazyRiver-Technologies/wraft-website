@@ -180,7 +180,7 @@ export default function Pricing() {
 
                 <button
                   data-testid={`pricing-${plan.name.toLowerCase()}-btn`}
-                  onClick={() => window.location.href = "https://wraft-git-vercel-react-server-compone-80e2d6-lazyrivertech-6835.vercel.app/login"}
+                  onClick={() => window.location.href = "https://wraft-ten.vercel.app/"}
                   className={`w-full py-3.5 rounded-full text-sm font-semibold transition-all duration-500 hover:-translate-y-1 flex items-center justify-center gap-2 ${
                     plan.accent
                       ? "bg-white text-[#0A0A0A] hover:bg-gray-100 shadow-md"

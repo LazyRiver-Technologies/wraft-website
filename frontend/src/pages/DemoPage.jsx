@@ -134,8 +134,8 @@ export default function DemoPage() {
             wraft<span className="text-[#25D366]">.</span>
           </Link>
           <div className="flex items-center gap-3">
-            <Link to="/login" className="text-xs font-medium text-[#52525B] hover:text-[#0A0A0A]">Sign In</Link>
-            <Link to="/register" className="text-xs font-semibold bg-[#0A0A0A] text-white px-4 py-1.5 rounded-full hover:bg-[#25D366] transition-colors">Sign Up Free</Link>
+            <a href="https://wraft-ten.vercel.app/" className="text-xs font-medium text-[#52525B] hover:text-[#0A0A0A]">Sign In</a>
+            <a href="https://wraft-ten.vercel.app/" className="text-xs font-semibold bg-[#0A0A0A] text-white px-4 py-1.5 rounded-full hover:bg-[#25D366] transition-colors">Sign Up Free</a>
           </div>
         </div>
       </nav>
@@ -280,7 +280,7 @@ export default function DemoPage() {
                 <div className="space-y-3">
                   <button
                     data-testid="demo-signup-btn"
-                    onClick={() => navigate("/register")}
+                    onClick={() => window.location.href = "https://wraft-ten.vercel.app/"}
                     className="w-full bg-[#25D366] hover:bg-[#1EAC52] text-white py-3.5 rounded-full font-semibold text-sm flex items-center justify-center gap-2 transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[#25D366]/25"
                   >
                     Get 50 Free Messages <ArrowRight className="w-4 h-4" />

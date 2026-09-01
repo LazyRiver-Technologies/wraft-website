@@ -59,14 +59,14 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-3">
             <button
               data-testid="nav-sign-in-btn"
-              onClick={() => window.location.href = "https://wraft-git-vercel-react-server-compone-80e2d6-lazyrivertech-6835.vercel.app/login"}
+              onClick={() => window.location.href = "https://wraft-ten.vercel.app/"}
               className="text-sm font-semibold text-[#0A0A0A] hover:text-[#25D366] transition-colors px-4 py-2"
             >
               Sign In
             </button>
             <button
               data-testid="nav-sign-up-btn"
-              onClick={() => window.location.href = "https://wraft-git-vercel-react-server-compone-80e2d6-lazyrivertech-6835.vercel.app/login"}
+              onClick={() => window.location.href = "https://wraft-ten.vercel.app/"}
               className="text-sm font-semibold bg-[#0A0A0A] text-white px-5 py-2 rounded-full hover:bg-[#25D366] transition-all duration-300 hover:-translate-y-0.5"
             >
               Get Started Free
@@ -104,13 +104,13 @@ export default function Navbar() {
               ))}
               <div className="pt-3 border-t border-[#E4E4E7] flex flex-col gap-2">
                 <button
-                  onClick={() => { window.location.href = "https://wraft-git-vercel-react-server-compone-80e2d6-lazyrivertech-6835.vercel.app/login"; setMobileOpen(false); }}
+                  onClick={() => { window.location.href = "https://wraft-ten.vercel.app/"; setMobileOpen(false); }}
                   className="text-sm font-semibold text-[#0A0A0A] py-2"
                 >
                   Sign In
                 </button>
                 <button
-                  onClick={() => { window.location.href = "https://wraft-git-vercel-react-server-compone-80e2d6-lazyrivertech-6835.vercel.app/login"; setMobileOpen(false); }}
+                  onClick={() => { window.location.href = "https://wraft-ten.vercel.app/"; setMobileOpen(false); }}
                   className="text-sm font-semibold bg-[#0A0A0A] text-white px-5 py-2.5 rounded-full"
                 >
                   Get Started Free

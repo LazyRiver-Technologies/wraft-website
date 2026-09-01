@@ -61,7 +61,7 @@ export default function Comparison() {
           </div>
           <button
             data-testid="comparison-cta-btn"
-            onClick={() => window.location.href = "https://wraft-git-vercel-react-server-compone-80e2d6-lazyrivertech-6835.vercel.app/login"}
+            onClick={() => window.location.href = "https://wraft-ten.vercel.app/"}
             className="relative z-10 flex-shrink-0 bg-gradient-to-r from-[#25D366] to-[#1EAC52] hover:shadow-[0_4px_20px_rgba(37,211,102,0.4)] text-white px-7 py-3 rounded-full text-sm font-semibold transition-all hover:-translate-y-1 flex items-center gap-2"
           >
             Start Free <ArrowRight className="w-4 h-4" />
